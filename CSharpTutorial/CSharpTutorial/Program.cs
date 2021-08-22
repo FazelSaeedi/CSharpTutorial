@@ -87,16 +87,57 @@ namespace CSharpTutorial
               |                                                 |             
               |-------------------------------------------------|*/
 
-            bool boolean =  true   ;
-            int     integer =  1      ;
-            float   Float   =  -5     ;
-            decimal Decimal =  10     ;
+            // bool boolean =  true   ;
+            // int     integer =  1      ;
+            // float   Float   =  -5     ;
+            // decimal Decimal =  10     ;
 
-            int i = 0;
-            Console.WriteLine("Min = {0}", int.MinValue);
-            Console.WriteLine("Min = {0}", int.MaxValue);
+
+            // int i = 0;
+            // Console.WriteLine("Min = {0}", int.MinValue);
+            // Console.WriteLine("Min = {0}", int.MaxValue);
+
 
             // End Part 3-----------------------------------------------------------------------
+
+
+
+            /*|--------------------------------------------------
+              |                                                 |
+              |                     Part 4                      |
+              |             Built - in string types             |
+              |                                                 |
+              |-------------------------------------------------|
+              |                                                 |
+              |                                                 |
+              |             Escape Sequences in C#              |
+              |              Verbatim Literal                   |
+              |                                                 |
+              |                                                 |             
+              |-------------------------------------------------|*/
+
+
+            string Name = "Fazel";
+            Console.WriteLine(Name);
+
+            Name = "\"Fazel\"";
+            Console.WriteLine(Name);
+
+            Name = "One\nTwo\nThree";
+            Console.WriteLine(Name);
+
+            Name = "C:\\System\\Csharp\\Opp";
+            Console.WriteLine(Name);
+
+            // Verbatim
+            Name = @"C:\\System\\Csharp\\Opp";
+            Console.WriteLine(Name);
+
+            Name = @"C:\System\Csharp\Opp";
+            Console.WriteLine(Name);
+
+            // End Part 4-----------------------------------------------------------------------
+
         }
     }
 }
