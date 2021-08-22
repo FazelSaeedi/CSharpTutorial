@@ -75,15 +75,19 @@ namespace CSharpTutorial
 
             /*|--------------------------------------------------
               |                                                 |
-              |                    Part 2                       |
+              |                     Part 3                      |
+              |                Built - in types                 |
               |                                                 |
               |-------------------------------------------------|
               |                                                 |
-              |                                                 |           
+              |                    boolean                      |
+              |                    integer                      |
+              |                    float                        |
+              |                    decimal                      |
               |                                                 |             
               |-------------------------------------------------|*/
 
-            bool    boolean =  true   ;
+            bool boolean =  true   ;
             int     integer =  1      ;
             float   Float   =  -5     ;
             decimal Decimal =  10     ;
