@@ -33,7 +33,7 @@ namespace CSharpTutorial
 
 
             // Write to console
-            //System.Console.WriteLine("Hello world");
+            // System.Console.WriteLine("Hello world");
 
 
             // End Part 1-----------------------------------------------------------------------
@@ -52,25 +52,47 @@ namespace CSharpTutorial
               |           Writing to the console                |
               |              a. concatenation                   |
               |              a. Place holder syntax             |
-              |                                                 |              |                                                 |
-              |                                                 |              |                                                 |
+              |                                                 |             
+              |                                                 |             
               |-------------------------------------------------|*/
 
-            Console.WriteLine("Please enter your name");
+            // Console.WriteLine("Please enter your name");
 
 
             // reading from the console (concatenation)
-            string FirstName = Console.ReadLine();
-            string LastName  = Console.ReadLine();
+            // string FirstName = Console.ReadLine();
+            // string LastName  = Console.ReadLine();
 
 
             // reading from the console (Place holder syntax)
-            Console.WriteLine("Hello {0},{1}" , FirstName , LastName );
-
+            // Console.WriteLine("Hello {0} {1}" , FirstName , LastName );
 
 
 
             // End Part 2-----------------------------------------------------------------------
+
+
+
+            /*|--------------------------------------------------
+              |                                                 |
+              |                    Part 2                       |
+              |                                                 |
+              |-------------------------------------------------|
+              |                                                 |
+              |                                                 |           
+              |                                                 |             
+              |-------------------------------------------------|*/
+
+            bool    boolean =  true   ;
+            int     integer =  1      ;
+            float   Float   =  -5     ;
+            decimal Decimal =  10     ;
+
+            int i = 0;
+            Console.WriteLine("Min = {0}", int.MinValue);
+            Console.WriteLine("Min = {0}", int.MaxValue);
+
+            // End Part 3-----------------------------------------------------------------------
         }
     }
 }
