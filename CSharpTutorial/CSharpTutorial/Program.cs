@@ -249,12 +249,12 @@ namespace CSharpTutorial
 
             /*|--------------------------------------------------
               |                                                 |
-              |                     Part 6                      |
+              |                     Part 7                      |
               |          Implicit & Explicit conversion         |
               |                                                 |             
               |-------------------------------------------------|
               |                                                 |        
-              |     Implicit conversion is done by compiler     |                                        |        
+              |     Implicit conversion is done by compiler     |                                               
               |                                                 |        
               |                Pars & Try Parse                 |        
               |                                                 |        
@@ -278,21 +278,21 @@ namespace CSharpTutorial
 
 
 
-            string strNumber = "100";
-            int i = int.Parse(strNumber);
+            // string strNumber = "100G";
+            // int i = int.Parse(strNumber);
 
-            int result = 0;
+            // int result = 0;
 
-            bool IsConversionSuccessful = int.TryParse(strNumber, out result);
+            // bool IsConversionSuccessful = int.TryParse(strNumber, out result);
 
-            if(IsConversionSuccessful)
-            {
-                Console.WriteLine(i);
-            }
-            else
-            {
-                Console.WriteLine("Please enter a valid number");
-            }
+            // if(IsConversionSuccessful)
+            // {
+            //     Console.WriteLine(result);
+            // }
+            // else
+            // {
+            //     Console.WriteLine("Please enter a valid number");
+            // }
 
             // Difference between Parse and TryParse
 
@@ -307,7 +307,38 @@ namespace CSharpTutorial
 
 
 
-            // End Part 6-----------------------------------------------------------------------
+            // End Part 7-----------------------------------------------------------------------
+
+            /*|--------------------------------------------------
+              |                                                 |
+              |                     Part 7                      |
+              |                     Array                       |
+              |                                                 |             
+              |-------------------------------------------------|
+              |                                                 |            
+              |                                                 |            
+              | An Array is a collection of similar data types  |            
+              |                                                 |        
+              |                                                 |        
+              |      disadvantages  : Array cannot grow in      |
+              |              size once initialized              |        
+              |                                                 |        
+              |                                                 |        
+              |-------------------------------------------------|*/
+
+
+
+            int[] EvenNumbers = new int[3];
+
+            EvenNumbers[0] = 0;
+            EvenNumbers[1] = 1;
+            EvenNumbers[2] = 2;
+
+
+            Console.WriteLine(EvenNumbers[1]);
+
+
+            // End Part 8 -----------------------------------------------------------------------
         }
     }
 }
