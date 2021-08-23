@@ -482,50 +482,106 @@ namespace CSharpTutorial
               |                                                 |            
               |-------------------------------------------------|*/
 
-            int TotalCoffeeCost = 0 ;
-
-        Start:
-            Console.WriteLine("Please Select tour offe size +: 1 - Small , 2 - Medium , 3 - Large ");
-            int UserChoise = int.Parse(Console.ReadLine());
-
-            switch (UserChoise)
-            {
-                case 1:
-                    TotalCoffeeCost += 1;
-                    break;
-
-                case 2:
-                    TotalCoffeeCost += 2;
-                    break;
-
-                case 3:
-                    TotalCoffeeCost += 3;
-                    break;
-                default:
-                    Console.WriteLine("Your choise {0} is invalid ", UserChoise);
-                    goto Start;
-            }
-
-            Decide:
-            Console.WriteLine("Do you want to buy another coffe - Yes or No ? ");
-            string UserDecision = Console.ReadLine();
-
-            switch (UserDecision.ToUpper())
-            {
-                case "YES":
-                    goto Start;
-                case "NO":
-                    break;
-                default:
-                    Console.WriteLine("Your choise {0} is invalid . Please try again ... ", UserDecision);
-                    goto Decide;
-            }
-
-            Console.WriteLine("Thank you for shooping with us ");
-            Console.WriteLine("Bill Amount = {0} ,", TotalCoffeeCost);
+            // int TotalCoffeeCost = 0 ;
+            // 
+            // Start:
+            // Console.WriteLine("Please Select tour offe size +: 1 - Small , 2 - Medium , 3 - Large ");
+            // int UserChoise = int.Parse(Console.ReadLine());
+            // 
+            // switch (UserChoise)
+            // {
+            //     case 1:
+            //         TotalCoffeeCost += 1;
+            //         break;
+            // 
+            //     case 2:
+            //         TotalCoffeeCost += 2;
+            //         break;
+            // 
+            //     case 3:
+            //         TotalCoffeeCost += 3;
+            //         break;
+            //     default:
+            //         Console.WriteLine("Your choise {0} is invalid ", UserChoise);
+            //         goto Start;
+            // }
+            // 
+            // Decide:
+            // Console.WriteLine("Do you want to buy another coffe - Yes or No ? ");
+            // string UserDecision = Console.ReadLine();
+            // 
+            // switch (UserDecision.ToUpper())
+            // {
+            //     case "YES":
+            //         goto Start;
+            //     case "NO":
+            //         break;
+            //     default:
+            //         Console.WriteLine("Your choise {0} is invalid . Please try again ... ", UserDecision);
+            //         goto Decide;
+            // }
+            // 
+            // Console.WriteLine("Thank you for shooping with us ");
+            // Console.WriteLine("Bill Amount = {0} ,", TotalCoffeeCost);
 
 
             // End Part 12 -----------------------------------------------------------------------
+
+
+
+
+            /*|--------------------------------------------------
+              |                                                 |
+              |                 Part 13 & 14                    |    
+              |                  while loop                     |            
+              |-------------------------------------------------|    
+              |                                                 |            
+              |-------------------------------------------------|*/
+
+
+            // int i = 0;
+            // while (i < 5)
+            // {
+            //     Console.WriteLine(i);
+            //     i++;
+            // }
+
+
+
+            /* Tip
+            while Do 
+            1 While loop checks the condition first 
+            2. if the condition is true , statements with in the loop are executed 
+            3. this process repeated as long as the condition evaluated totrue 
+             
+             */
+
+            /* Tip
+            DO while
+            1. A do loop checks its condition at the end of the loop .
+            2. this means that the do loop is guaranteed to execute at least one time . 
+            3. Do loops are used to present a menu to the user .
+
+             */
+
+            /*Diffrent between while && do while 
+            
+            1. While loop checks the condition at the beginning , where as do while loop checks the condition at the end of the loop 
+            2. Do loop is guaranteed to eecute at least once , where as while loop is not .
+
+             */
+
+
+            // while do 
+            // int i = 0;
+            // do
+            // {
+            //     Console.WriteLine(i);
+            //     i++;
+            // }
+            // while (i < 5);
+
+            // End Part 13 & 14 -----------------------------------------------------------------------
 
         }
     }
