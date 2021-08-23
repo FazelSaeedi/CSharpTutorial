@@ -409,6 +409,64 @@ namespace CSharpTutorial
             // End Part 10 -----------------------------------------------------------------------
 
 
+            /*|--------------------------------------------------
+              |                                                 |
+              |                    Part 11                      |         
+              |                Switch Statement                 |             
+              |                                                 |             
+              |-------------------------------------------------|
+              |                                                 |            
+              |       Multiple if else statements can be        |
+              |         replaced woth a swutch statement        |            
+              |                                                 |        
+              |-------------------------------------------------|*/
+
+            // ex1 
+            // int nitem = 5;
+            // switch (nitem)
+            // {
+            // 
+            //     case 1:
+            //         Console.WriteLine("case 1");
+            //         break;
+            // 
+            //     case 5:
+            //         Console.WriteLine("case 5");
+            //         break;
+            // 
+            //     case 9:
+            //         Console.WriteLine("case 9");
+            //         break;
+            // 
+            //     default:
+            //         Console.WriteLine("No match found");
+            //         break;
+            // }
+
+
+
+
+            // ex 2  (multiple case statement)
+            // int i = 5;
+            // 
+            // switch (i)
+            // {
+            //     case int n when (n >= 7):
+            //         Console.WriteLine($"I am 7 or above: {n}");
+            //         break;
+            // 
+            //     case int n when (n >= 4 && n <= 6):
+            //         Console.WriteLine($"I am between 4 and 6: {n}");
+            //         break;
+            // 
+            //     case int n when (n <= 3):
+            //         Console.WriteLine($"I am 3 or less: {n}");
+            //         break;
+            // }
+
+
+
+            // End Part 11 -----------------------------------------------------------------------
         }
     }
 }
