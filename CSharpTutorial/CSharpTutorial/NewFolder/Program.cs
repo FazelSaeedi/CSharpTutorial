@@ -583,6 +583,55 @@ namespace CSharpTutorial
 
             // End Part 13 & 14 -----------------------------------------------------------------------
 
+
+
+
+
+            /*|--------------------------------------------------
+              |                                                 |
+              |                  Part 15                        |    
+              |              for & foreach loop                 |            
+              |-------------------------------------------------|    
+              |                                                 |            
+              |-------------------------------------------------|*/
+
+            int length = 100;
+            for (int index = 1; index < length; index++)
+            {
+                //Your code will be here  
+                //This is how a programmer makes century.....#ilovecricket  
+            }
+
+
+            int[] Numbers = { 1, 2, 3, 4, 5, 6 };
+
+            foreach (int item in Numbers)
+            {
+                // do something
+            }
+
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                {
+                    break;
+                }
+                Console.WriteLine(i);
+            }
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 4)
+                {
+                    continue;
+                }
+                Console.WriteLine(i);
+            }
+            // End Part 15 -----------------------------------------------------------------------
+
         }
     }
 }
