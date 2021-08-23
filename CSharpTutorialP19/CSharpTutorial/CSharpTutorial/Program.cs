@@ -97,12 +97,82 @@ namespace CSharpTutorial
                 Console.WriteLine(ex.Message);
             }
 
+
+        // Enum
+        Level myVar = Level.Medium;
+        Console.WriteLine(myVar);
+
+
+        Level myVar11 = Level.Medium;
+        switch (myVar)
+        {
+            case Level.Low:
+                Console.WriteLine("Low level");
+                break;
+            case Level.Medium:
+                Console.WriteLine("Medium level");
+                break;
+            case Level.High:
+                Console.WriteLine("High level");
+                break;
+        }
+
+
+
+
+        Console.WriteLine(WeekDays.Friday); //output: Friday 
+        int day = (int)WeekDays.Friday; // enum to int conversion
+        Console.WriteLine(day); //output: 4 
+		
+        var wd = (WeekDays)5; // int to enum conversion
+        Console.WriteLine(wd);//output: Saturday 
+
+            string[] Names = Enum.GetNames(typeof(WeekDays));
+
+            foreach (int i in Enum.GetValues(typeof(WeekDays)))
+            {
+                Console.WriteLine(i);
+            }
+
+
+
+            Season s1 = Season.Spring;
+            Season s2 = Season.Autumn;
+
+            Console.WriteLine(s1);
+            Console.WriteLine(s2);
+
+            Console.WriteLine("----------------------");
+
+            Console.WriteLine(s1.GetType());
+            Console.WriteLine(Enum.GetUnderlyingType(s1.GetType()));
+        }
+        enum Level{Low,Medium,High}
+        enum WeekDays
+        {
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday,
+            Sunday
+        }
+
+        enum Season : byte
+        {
+            Spring = 1,
+            Summer = 2,
+            Autumn = 3,
+            Winter = 4
         }
 
         public static void Hello(string strMessage)
         {
             Console.WriteLine(strMessage);
         }
+
+
     }
 
     public class UserAlreadyLoggedInException : Exception
