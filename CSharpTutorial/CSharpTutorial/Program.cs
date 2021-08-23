@@ -328,17 +328,44 @@ namespace CSharpTutorial
 
 
 
-            int[] EvenNumbers = new int[3];
-
-            EvenNumbers[0] = 0;
-            EvenNumbers[1] = 1;
-            EvenNumbers[2] = 2;
-
-
-            Console.WriteLine(EvenNumbers[1]);
+            // int[] EvenNumbers = new int[3];
+            // 
+            // EvenNumbers[0] = 0;
+            // EvenNumbers[1] = 1;
+            // EvenNumbers[2] = 2;
+            // 
+            // 
+            // Console.WriteLine(EvenNumbers[1]);
 
 
             // End Part 8 -----------------------------------------------------------------------
+
+
+            /*|--------------------------------------------------
+              |                                                 |
+              |                     Part 8                      |
+              |                    Comments                     |
+              |                                                 |             
+              |-------------------------------------------------|
+              |                                                 |            
+              |               Single line comments              |            
+              |               Multi line comments               |            
+              |                                                 |        
+              |                                                 |        
+              |-------------------------------------------------|*/
+
+                
+                // use // for line comment 
+
+                // use /**/ for multiple comment 
+
+                // use /// for summary and class documentation 
+
+
+
+            // End Part 8 -----------------------------------------------------------------------
+
+
         }
     }
 }
