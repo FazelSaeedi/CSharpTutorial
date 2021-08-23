@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace CSharpTutorial
 {
@@ -54,12 +55,72 @@ namespace CSharpTutorial
             message -= new TestDeleGate.ShowMessage(td.message2);
             Console.WriteLine("----------------------");
             message("Message 2 Removed");
+
+
+
+
+
+            // Exceptions
+
+            try
+            {
+                int[] myNumbers = { 1, 2, 3 };
+                Console.WriteLine(myNumbers[10]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+
+            try
+            {
+                int[] myNumbers = { 1, 2, 3 };
+                Console.WriteLine(myNumbers[10]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong.");
+            }
+            finally
+            {
+                Console.WriteLine("The 'try catch' is finished.");
+            }
+
             
+            try
+            {
+                throw new UserAlreadyLoggedInException("User is not valid");
+            }
+            catch(UserAlreadyLoggedInException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
         }
 
         public static void Hello(string strMessage)
         {
             Console.WriteLine(strMessage);
+        }
+    }
+
+    public class UserAlreadyLoggedInException : Exception
+    {
+        public UserAlreadyLoggedInException() : base() { }
+        public UserAlreadyLoggedInException(string message ) : base(message)
+        {
+            
+        }
+
+        public UserAlreadyLoggedInException(string message , Exception innerException) : base (message , innerException)
+        {
+
+        }
+
+        public UserAlreadyLoggedInException( SerializationInfo info , StreamingContext context) : base(info, context)
+        {
+
         }
     }
     
