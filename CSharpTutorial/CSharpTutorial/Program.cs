@@ -343,7 +343,7 @@ namespace CSharpTutorial
 
             /*|--------------------------------------------------
               |                                                 |
-              |                     Part 8                      |
+              |                     Part 9                      |
               |                    Comments                     |
               |                                                 |             
               |-------------------------------------------------|
@@ -354,16 +354,59 @@ namespace CSharpTutorial
               |                                                 |        
               |-------------------------------------------------|*/
 
-                
-                // use // for line comment 
 
-                // use /**/ for multiple comment 
+            // use // for line comment 
 
-                // use /// for summary and class documentation 
+            // use /**/ for multiple comment 
+
+            // use /// for summary and class documentation 
 
 
 
-            // End Part 8 -----------------------------------------------------------------------
+            // End Part 9 -----------------------------------------------------------------------
+
+
+            /*|--------------------------------------------------
+              |                                                 |
+              |                    Part 10                      |
+              |                   if statement                  |
+              |                                                 |             
+              |                                                 |             
+              |-------------------------------------------------|
+              |                                                 |            
+              |              diffrent betwen | and ||           |            
+              |              diffrent betwen & and &&           |            
+              |                                                 |        
+              |-------------------------------------------------|*/
+
+            // ex 1 
+
+
+            // Console.WriteLine("please enter a number ");
+            // 
+            // int UserNumber = int.Parse(Console.ReadLine());
+            // 
+            // if (UserNumber == 1)
+            //     Console.WriteLine("Your Number is one");
+            // else if(UserNumber == 2)
+            //     Console.WriteLine("Your Number is Two");
+            // else if (UserNumber != 1 && UserNumber != 2 && UserNumber != 3)
+            //     Console.WriteLine("Your number is not between 1 and 3 ");
+
+
+            //  | Boolean logical OR
+
+
+            //  & Boolean logical AND
+
+
+            // && check both condition  (AND)
+
+
+            // || Or condition
+
+
+            // End Part 10 -----------------------------------------------------------------------
 
 
         }
