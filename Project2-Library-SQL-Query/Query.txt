@@ -1,0 +1,187 @@
+CREATE DATABASE library;
+
+
+
+-----------------------------------------
+USE [library]
+GO
+
+
+CREATE TABLE [dbo].[Users] (
+    id int identity(1,1),
+	firstName varchar(30) NOT NULL ,
+    lastName  varchar(30) NOT NULL ,
+    userName varchar(30) NOT NULL UNIQUE,
+	password varchar (100) NOT NULL UNIQUE,
+    phone char(10) NOT NULL UNIQUE,
+	isActive bit NOT NULL,
+	createDate datetime NOT NULL,
+	updateDate datetime  ,
+	PRIMARY KEY (id)
+);
+GO
+
+---------------------------------------------------------------------
+USE [library]
+GO
+
+
+CREATE TABLE [dbo].[books] (
+    id int identity(1,1),
+	title varchar(30) NOT NULL UNIQUE,
+	isbn BIGINT NOT NULL UNIQUE,
+	isVisible BIT NOT NULL ,
+	pagecount SMALLINT NOT NULL,
+	createDate DATETIME NOT NULL,
+	updateDate DATETIME  ,
+	PRIMARY KEY (id)
+);
+GO
+
+
+
+---------------------------------------------------------------------
+USE [library]
+GO
+
+
+CREATE TABLE [dbo].[Shelves] (
+    	id int identity(1,1),
+	title varchar(30) NOT NULL UNIQUE,
+   	userId int NOT NULL ,
+	createDate DATETIME NOT NULL ,
+	updateDate DATETIME  ,
+	PRIMARY KEY (id) ,
+	FOREIGN KEY (userId) REFERENCES Users(id)
+);
+GO
+
+---------------------------------------------------------------------
+USE [library]
+GO
+
+CREATE TABLE [dbo].[booksShelves] (
+    id int identity(1,1),
+	shelfId int NOT NULL ,
+	bookId int NOT NULL ,
+	isReaded bit ,
+	createDate DATETIME NOT NULL ,
+	updateDate DATETIME  ,
+	PRIMARY KEY (id),
+	FOREIGN KEY (shelfId) REFERENCES Shelves(id) ,
+	FOREIGN KEY (bookId) REFERENCES books(id) ,
+);
+
+
+------------------------------------------------------------------
+
+
+USE [library]
+GO
+
+
+INSERT INTO Users(firstName,lastName,userName,password,phone ,isActive ,createDate)
+VALUES 
+('firstName1','lastName1','User1','password1',9366285660,1,'2633-09-09 22:34:09.000'),
+('firstName2','lastName2','User2','password2',9366285661,1,'2633-09-09 22:34:09.000'),
+('firstName3','lastName3','User3','password3',9366285662,1,'2633-09-09 22:34:09.000');
+
+
+INSERT INTO books(title,isbn,isVisible,pagecount,createDate)
+VALUES 
+('book1' , '1231231231233' , 1 , 242 , '2633-09-09 22:34:09.000') ,
+('book2' , '1231231231235' , 1 , 150 , '2633-09-09 22:34:09.000') , 
+('book3' , '1231231231239' , 1 , 350 , '2633-09-09 22:34:09.000') ;
+
+
+
+INSERT INTO Shelves(title,userId,createDate)
+VALUES 
+('shelf1'   , 1  , '2633-09-09 22:34:09.000'), 
+('shelf2'   , 1  , '2633-09-09 22:34:09.000'),
+('shelf3'   , 1  , '2633-09-09 22:34:09.000'),
+('Myshelf1' , 2  , '2633-09-09 22:34:09.000'),
+('MyShelf2' , 2  , '2633-09-09 22:34:09.000');
+
+INSERT INTO booksShelves(shelfId,bookId,isReaded,createDate)
+VALUES 
+( 1 , 1 , 0 , '2633-09-09 22:34:09.000'), 
+( 1 , 1 , 0 , '2633-09-09 22:34:09.000'),
+( 2 , 2 , 0 , '2633-09-09 22:34:09.000'),
+( 4 , 3 , 0 , '2633-09-09 22:34:09.000'),
+( 4 , 3 , 0 , '2633-09-09 22:34:09.000');
+
+
+
+------------------------------------------------------------------
+
+
+Question : write query which return count of all book
+
+SELECT COUNT(id)
+FROM [dbo].[books];
+GO
+
+------------------------------------------------------------------
+
+
+Question : write query which return count of all Users
+
+SELECT COUNT(id)
+FROM [dbo].[Users];
+GO
+
+
+-----------------------------------------------------------------
+
+
+Question : Write a query that returns all user shelves
+
+SELECT *
+FROM [library].[dbo].[shelves]
+where userId = 2
+GO
+
+
+---------------------------------------------------------------
+
+
+Question : Write a query that returns count of user's book 
+
+
+SELECT count([booksShelves].bookId)
+FROM [library].[dbo].[booksShelves]
+INNER JOIN Shelves ON [booksshelves].shelfId = shelves.id
+INNER JOIN users  ON [shelves].userid = users.id
+where users.id = 1;
+
+
+--------------------------------------------------------------
+
+
+Question : Write a query that returns status of read and unreaded user's books
+
+
+SELECT count([booksShelves].bookId)
+FROM [library].[dbo].[booksShelves]
+INNER JOIN Shelves ON [booksshelves].shelfId = shelves.id
+INNER JOIN users  ON [shelves].userid = users.id
+where users.id = 1;
+
+
+-------------------------------------------------------------
+
+
+Question : Write a query that returns status of just read user's books
+
+
+SELECT  [booksShelves].id ,[books].title , [booksShelves].isReaded
+FROM [library].[dbo].[booksShelves]
+INNER JOIN Shelves  ON [booksShelves].shelfId = Shelves .id
+INNER JOIN users  ON [Shelves].userid = users.id
+INNER JOIN books  ON [booksShelves].bookId = books.id
+where users.id = 2 AND [booksShelves].isReaded = 1 ;
+
+
+
+-------------------------------------------------------------
