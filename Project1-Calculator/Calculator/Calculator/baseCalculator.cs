@@ -18,7 +18,7 @@ namespace baseCalculator
         protected double Result { get; set; }
         protected enum Method { separate , expression }
         protected enum Action { history, finish }
-        protected enum MathOperator{ sum  , subtract , multiply , divide};
+        protected enum MathOperator{ sum , subtract , multiply , divide};
         public abstract void Run();
         public string DisplayResult()
         {
