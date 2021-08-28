@@ -35,10 +35,6 @@ namespace ADO_Library
             var userBooksStatus =repositoryService.GetBooksStatus(1);
 
 
-            var sAs =repositoryService.getUsers();
-
-
-
 
 
 
