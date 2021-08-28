@@ -1,0 +1,67 @@
+dotnet new sln -n mySLN
+
+
+dotnet new webapi -n MyName -lang "C#"
+
+
+dotnet sln add HiizDD/HiizDD.csproj
+
+
+dotnet run -f net5.0
+
+
+dotnet restor  -> update dependencies in packages and project.json and project.lock.json
+
+
+dotnet bundle -> create bundle minify 
+
+
+dotnet build
+
+
+dotnet publish  -> Publishes the application and its dependencies to a folder for deployment to a hosting system.
+
+
+dotnet test - .NET test driver used to execute unit tests.
+
+
+dotnet pack - Packs the code into a NuGet package.
+
+
+dotnet-vstest - Runs tests from the specified assemblies.
+
+
+dotnet clean - Cleans the output of a project.
+
+
+dotnet sln - Lists or modifies the projects in a .NET solution file.
+
+
+dotnet store - Stores the specified assemblies in the runtime package store.
+
+
+
+dotnet add package Newtonsoft.Json --version 12.0.1
+dotnet add package - Adds a package reference to a project file.
+
+
+dotnet add reference - Adds project-to-project (P2P) references.
+
+
+dotnet list reference - Lists project-to-project references.
+
+
+dotnet add app/app.csproj reference lib/lib.csproj
+
+
+
+
+
+
+
+
+
+
+
+
+
