@@ -152,8 +152,7 @@ Question : Write a query that returns count of user's book
 SELECT count([booksShelves].bookId)
 FROM [library].[dbo].[booksShelves]
 INNER JOIN Shelves ON [booksshelves].shelfId = shelves.id
-INNER JOIN users  ON [shelves].userid = users.id
-where users.id = 1;
+where Shelves.userId = 1;
 
 
 --------------------------------------------------------------
