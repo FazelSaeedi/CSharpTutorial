@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Framework\Framework.csproj" />
+	  <ProjectReference Include="..\LibraryManagement.Application.Contract\LibraryManagement.Application.Contract.csproj" />
+	  <ProjectReference Include="..\LibraryManagement.Application\LibraryManagement.Application.csproj" />
+	  <ProjectReference Include="..\LibraryManagement.Domain\LibraryManagement.Domain.csproj" />
+	  <ProjectReference Include="..\LibraryManagement.Infrastructure.EFCore\LibraryManagement.Infrastructure.EFCore.csproj" />
+	</ItemGroup>
+	
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
