@@ -14,6 +14,7 @@ namespace LibraryManagement.Application.Contract.Book
         OperationResult Create(CreateBook command);
 
         OperationResult Edit(EditBook command);
+
         OperationResult Delete(long id);
 
         BookViewModel get(long id);

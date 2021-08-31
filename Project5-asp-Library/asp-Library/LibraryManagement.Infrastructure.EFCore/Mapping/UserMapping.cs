@@ -35,12 +35,12 @@ namespace LibraryManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.phone)
                     .IsRequired()
                     .HasMaxLength(10);
-                    
+
 
 
             builder.Property(x => x.isActive)
-                .IsRequired()
-                .HasDefaultValue(true);
+                .IsRequired();
+                
 
 
 
