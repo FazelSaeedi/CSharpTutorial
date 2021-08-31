@@ -81,7 +81,7 @@ namespace asp_Library.Controllers
 
 
         [Route("Edit")]
-        [HttpPost]
+        [HttpPut]
         public ToJson Edit([FromBody] EditBook book)
         {
 
@@ -98,7 +98,7 @@ namespace asp_Library.Controllers
 
 
         [Route("Delete/{id}")]
-        [HttpGet]
+        [HttpDelete]
         public ToJson Delete(long id)
         {
 

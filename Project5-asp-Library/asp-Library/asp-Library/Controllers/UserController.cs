@@ -57,7 +57,7 @@ namespace asp_Library.Controllers
 
 
         [Route("Edit")]
-        [HttpPost]
+        [HttpPut]
         public ToJson Edit([FromBody] EditUser book)
         {
 
